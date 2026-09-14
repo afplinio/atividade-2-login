@@ -1,0 +1,316 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+    background: #f7f7f5;
+    color: #171717;
+}
+
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    background: #fff;
+}
+
+
+/* =========================
+   IMAGEM - DIREITA
+========================= */
+
+.login-image-logo-container {
+    width: 50%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eeeeec;
+
+    overflow: hidden;
+}
+
+.login-image-logo-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* =========================
+   FORMULÁRIO - ESQUERDA
+========================= */
+
+.login-container > .login-form {
+    width: 50%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fdfdfc;
+
+    padding: 40px;
+}
+
+
+/* =========================
+   FORM INTERNO
+========================= */
+
+form.login-form {
+    width: 100%;
+    max-width: 420px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.login-title {
+    margin-bottom: 10px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+
+    color: #171717;
+
+    text-align: left;
+}
+
+
+/* =========================
+   SUBTÍTULO
+========================= */
+
+.login-subtitle {
+    margin-bottom: 35px;
+
+    max-width: 390px;
+
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+
+    color: #77736c;
+
+    text-align: left;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.login-form input {
+    width: 100%;
+    height: 52px;
+
+    margin-bottom: 18px;
+    padding: 0 16px;
+
+    border: 1px solid #d6d3cd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    color: #222;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-form input::placeholder {
+    color: #aaa6a0;
+}
+
+.login-form input:focus {
+    border-color: #c9a227;
+
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.10);
+}
+
+
+/* =========================
+   BOTÃO DOURADO
+========================= */
+
+.login-button-container {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.login-button-container button {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #c9a227;
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-button-container button:hover {
+    background: #b38e1c;
+
+    box-shadow: 0 6px 18px rgba(180, 143, 28, 0.22);
+}
+
+.login-button-container button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.login-redirect-options {
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #817d76;
+}
+
+.login-redirect-options a {
+    color: #b18b1d;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.login-redirect-options a:hover {
+    color: #80630f;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-image-logo-container {
+        width: 100%;
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .login-container > .login-form {
+        width: 100%;
+        min-height: 60vh;
+
+        padding: 50px 30px;
+    }
+
+    form.login-form {
+        max-width: 420px;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 500px) {
+
+    .login-image-logo-container {
+        height: 32vh;
+        min-height: 220px;
+    }
+
+    .login-container > .login-form {
+        padding: 35px 25px;
+    }
+
+    .login-title {
+        font-size: 38px;
+    }
+
+    .login-subtitle {
+        font-size: 13px;
+        margin-bottom: 28px;
+    }
+
+    .login-form input {
+        height: 50px;
+    }
+
+    .login-button-container button {
+        height: 50px;
+    }
+}
