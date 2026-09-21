@@ -1,0 +1,157 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+    background: #f7f7f5;
+    color: #171717;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: #fdfdfc;
+}
+
+.home-content {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 50px 45px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e2dc;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 30px rgba(23, 23, 23, 0.05);
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.home-title {
+    margin-bottom: 12px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+
+    color: #171717;
+}
+
+/* =========================
+   MENSAGEM
+========================= */
+
+.home-message {
+    margin-bottom: 8px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+
+    color: #171717;
+}
+
+.home-description {
+    margin-bottom: 30px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    color: #77736c;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.home-content form {
+    width: 100%;
+}
+
+.home-btn {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #c9a227;
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-btn:hover {
+    background: #b38e1c;
+
+    box-shadow: 0 6px 18px rgba(180, 143, 28, 0.22);
+}
+
+.home-btn:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 500px) {
+
+    .home-container {
+        padding: 25px;
+    }
+
+    .home-content {
+        padding: 40px 25px;
+    }
+
+    .home-title {
+        font-size: 40px;
+    }
+
+    .home-message {
+        font-size: 15px;
+    }
+}

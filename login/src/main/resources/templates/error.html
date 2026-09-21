@@ -4,31 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error Page</title>
+    <title>Erro no Login</title>
     <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 
 <body>
+
 <div class="login-container">
+
     <div class="login-image-logo-container">
         <img th:src="@{/images/login.png}" alt="Abaporu GALO DOIDO">
     </div>
+
     <div class="login-form">
-        <form th:action="@{/login}" method="post" class="login-form">
-            <h4 class="login-title">Login</h4>
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <input type="password" id="password" name="password" placeholder="Senha" required>
-            <div class="login-button-container">
-                <button type="submit">Entrar</button>
-            </div>
-            <p class="login-redirect-options">
-                Falha ao efetuar o Login!<br>
-                <a th:href="@{/register}">Cadastre-se</a> |
-                <a th:href="@{/recoverpassword}">Esqueceu sua senha?</a>
+
+        <div class="error-content">
+
+            <h4 class="login-title">Ops!</h4>
+
+            <p class="error-message">
+                Não foi possível realizar o login.
             </p>
-        </form>
+
+            <p class="error-description">
+                Verifique seu usuário e senha e tente novamente.
+            </p>
+
+            <div class="login-button-container">
+                <a th:href="@{/login}" class="error-button">
+                    Tentar novamente
+                </a>
+            </div>
+
+        </div>
+
     </div>
+
 </div>
+
 </body>
 
 </html>

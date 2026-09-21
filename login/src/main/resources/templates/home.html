@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
+
 <body>
+
 <div class="home-container">
-    <h2>Bem-vindo à página inicial!</h2>
-    <p class="home-message">Login realizado com sucesso.</p>
-    <form  th:action="@{/logout}" method="post" style="margin-top: 20px;">
-        <button type="submit" class="home-btn">Sair</button>
-    </form>
+
+    <div class="home-content">
+
+        <h2 class="home-title">Bem-vindo!</h2>
+
+        <p class="home-message">
+            Login realizado com sucesso.
+        </p>
+
+        <p class="home-description">
+            Você já pode continuar explorando nossa plataforma.
+        </p>
+
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="home-btn">
+                Sair
+            </button>
+        </form>
+
+    </div>
+
 </div>
+
 </body>
 </html>
